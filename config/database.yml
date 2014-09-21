@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: ohlife-export_development
   pool: 5
-  username: ohlife-export
+  username: ohlife_export
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: ohlife-export_test
   pool: 5
-  username: ohlife-export
+  username: ohlife_export
   password:
 
 production:
@@ -56,5 +56,5 @@ production:
   encoding: unicode
   database: ohlife-export_production
   pool: 5
-  username: ohlife-export
+  username: ohlife_export
   password:
