@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-OhlifeExport::Application.config.secret_key_base = '6d715a133cfa96489533acfce2969ab1dd5b79acfd1b34d5d874a2daee43841599d892d966cb0d37a913f6f9335f9ab2a1aa9014cb61d842a3625bd61b4e7059'
+OhlifeExport::Application.config.secret_key_base = '832cb19f3576d4797a068faf65909f28f0b986fd233ea887874b1f53810908839639239004eafdbdbcb54603e7b9c5e4797d770d947e40ae9ae2cd8c3c20379f'
