@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.5'
 
@@ -29,6 +31,11 @@ gem 'httparty'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+group :production do
+  gem 'rails_12factor' # required by heroku
+  gem 'heroku-deflater' # Deflate assets in production
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
