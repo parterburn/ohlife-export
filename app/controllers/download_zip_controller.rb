@@ -35,7 +35,7 @@ class DownloadZipController < ApplicationController
         end
       end
 
-      { name: "ohlife_export", files: files_to_zip.compact }      
+      { name: "ohlife_images", files: files_to_zip.compact }
     end
 
     def zip_up(download_manifest)

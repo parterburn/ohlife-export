@@ -1,3 +1,3 @@
-== OhLife Image Export
+== OhLife Images Export Tool
 
 OhLife.com is shutting down on October 4, 2014. This tool will let you download your images in OhLife and rename them to match the day of the entry.
