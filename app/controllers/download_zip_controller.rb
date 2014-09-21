@@ -39,29 +39,25 @@ class DownloadZipController < ApplicationController
     end
 
     def zip_up(download_manifest)
-      begin
-        if download_manifest[:files].length > 0
-          begin
-            response = HTTParty.post "http://#{ENV['DOWNLOADER_URL']}/downloads",
-              headers: { 'Content-Type' => 'application/json' },
-              basic_auth: {
-                username: ENV['DOWNLOADER_ID'],
-                password: ENV['DOWNLOADER_SECRET']
-              },
-              body: download_manifest.to_json
-            @files_count = download_manifest[:files].length
-            flash.now[:info] = "Downloading now..."
-            redirect_to response['url']
-          rescue
-            flash[:error] = "Could not download ZIP file"
-            redirect_to :back
-          end
-        else
-          flash[:error] = "No attachments to download"
+      if download_manifest[:files].length > 0
+        begin
+          response = HTTParty.post "http://#{ENV['DOWNLOADER_URL']}/downloads",
+            headers: { 'Content-Type' => 'application/json' },
+            basic_auth: {
+              username: ENV['DOWNLOADER_ID'],
+              password: ENV['DOWNLOADER_SECRET']
+            },
+            body: download_manifest.to_json
+          @files_count = download_manifest[:files].length
+          flash.now[:info] = "Downloading now..."
+          redirect_to response['url']
+        rescue
+          flash[:error] = "Could not download ZIP file"
           redirect_to :back
         end
-      rescue ActionController::RedirectBackError
-        redirect_to root_path
+      else
+        flash[:error] = "No attachments to download"
+        redirect_to :back
       end
     end          
 
