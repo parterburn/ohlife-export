@@ -3,8 +3,9 @@
   <ol>
     <li>Login to <a href="https://ohlife.com/past" target="_blank">OhLife</a></li>
     <li>Right click and choose "<a href="view-source:https://ohlife.com/past" target="_blank">View Source</a>". <a href="http://www.wikihow.com/View-Source-Code" target="_blank">Need help?</a></li>
-    <li>Copy &amp; paste the code into the text area below</a></li>
-    <li>A zipped up version of your images will start downloading!</a></li>
+    <li>Copy &amp; paste the code into the text area below.</a></li>
+    <li>JSON: A machine readable format of your entries will download (in the case that an alternative service in the future chooses to support this type of import).</a></li>
+    <li>IMAGES: A zipped up version of your images renamed with the day of the entry will start downloading.</a></li>
   </ol>
   <br>
 </div>
@@ -16,6 +17,6 @@
       <%= text_area_tag :source, nil, placeholder: "<html><head></head>...", size: "100x10", class: "form-control", style: "width:100%;" %>
     </div>
   <% end %>
-  <button class="btn btn-primary disabled" id="export_text_form" disabled="disabled">Export Text</button>  
+  <button class="btn btn-primary disabled" id="export_text_form" disabled="disabled">Export JSON</button>  
   <button class="btn btn-primary disabled" id="export_images_form" disabled="disabled">Export Images</button>
 </div>
