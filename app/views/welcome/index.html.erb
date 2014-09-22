@@ -9,12 +9,13 @@
   <br>
 </div>
 
-<div class="col-md-12">
-  <%= form_tag zip_path, id: "download_images" do %>  
+<div class="col-md-12 s-form">
+  <%= form_tag zip_path, id: "export_ohlife" do %>  
     <div class="form-group">
-      <label for="source">Past HTML Source here:</label>
+      <label for="source"><b>Paste HTML Source here:</b></label>
       <%= text_area_tag :source, nil, placeholder: "<html><head></head>...", size: "100x10", class: "form-control", style: "width:100%;" %>
     </div>
-    <%= submit_tag "Download All Images", class: "btn btn-primary", id: "submit_form" %>
   <% end %>
+  <button class="btn btn-primary disabled" id="export_text_form" disabled="disabled">Export Text</button>  
+  <button class="btn btn-primary disabled" id="export_images_form" disabled="disabled">Export Images</button>
 </div>

@@ -1,7 +1,6 @@
 class DownloadZipController < ApplicationController
 
   def show
-    @parsed = []
     view_source = params[:source]
     download_manifest = process_source(view_source)
     zip_up(download_manifest)
@@ -56,7 +55,7 @@ class DownloadZipController < ApplicationController
           redirect_to :back
         end
       else
-        flash[:error] = "No attachments to download"
+        flash[:error] = "No images to download"
         redirect_to :back
       end
     end          
